@@ -1,4 +1,4 @@
-# Statikus Weboldal Hostolása Azure App Services-en
+# Statikus Weboldal Hostolása Azure App Services-en (hu)
 Ez a projekt bemutatja, hogyan lehet létrehozni és hosztolni egy statikus weboldalt az Azure App Services segítségével. Az alkalmazás GitHub repository-ból kerül automatikusan telepítésre, folyamatos integrációval (CI/CD), hogy a weboldal frissítései és módosításai gyorsan alkalmazásra kerüljenek.
 
 ## Projekt célja:
@@ -58,3 +58,56 @@ App Service létrehozása:
 Mivel az Azure App Services rendelkezik beépített CI/CD integrációval, minden egyes új commit a GitHub repository-ban automatikusan deployolásra kerül az Azure-ra.
 Az App Service monitorozza a repository-t, és bármely új változtatás automatikusan alkalmazásra kerül.
 
+
+# Hosting a Static Website on Azure App Services (eng)
+This project demonstrates how to create and host a static website using Azure App Services. The application is automatically deployed from a GitHub repository with continuous integration (CI/CD), ensuring that updates and changes to the website are quickly applied.
+
+## Project Goal:
+The goal is to demonstrate how to easily and efficiently host a static website on Azure, using GitHub’s continuous integration system (CI/CD) to automatically update the website with each change.
+
+### Prerequisites
+Before starting the project, ensure you have the following:
+
+- Azure Account: If you don’t have one yet, create one [here](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account/search?icid=free-search&ef_id=_k_EAIaIQobChMIop6rouryigMVJZGDBx1y3CuNEAAYASAAEgLWsPD_BwE_k_&OCID=AIDcmmip7xznjm_SEM__k_EAIaIQobChMIop6rouryigMVJZGDBx1y3CuNEAAYASAAEgLWsPD_BwE_k_&gad_source=1&gclid=EAIaIQobChMIop6rouryigMVJZGDBx1y3CuNEAAYASAAEgLWsPD_BwE).
+- GitHub Account: Register if you haven’t already [here](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home).
+- Visual Studio Code or another text editor.
+- Git installed on your machine.
+- 
+## 1. Creating the Azure App Service
+
+Open the Azure Portal and sign in with your account.
+
+**Creating the App Service:**
+
+- In the Azure portal’s search bar, type "App Services" to find the service. <img src="/assets/images.jpg" alt="Image description" width="25" />
+- Click the + Create button to create a new application, then select the + Static Web App option to host a static website.
+
+*Fill in the following fields:*
+
+Project Details:
+- Subscription: Choose the appropriate subscription.
+- Resource Group: Select or create a new resource group.
+  
+Static Web App details:
+- Name: Enter the application name (e.g., my-static-website).
+- Hosting plan: Plan Type: Select the appropriate hosting plan (e.g., Free: For hobby or personal projects).
+  
+Deployment details:
+- Source: Choose where the App Services should integrate the website’s code (It’s recommended to choose GitHub).
+- GitHub Account: Link your GitHub account to the service, then select the appropriate Organization, Repository, and Branch :green_circle:(CI/CD).
+  
+Build Details:
+- Build Presets: Automatically detected by the service (Custom (detected)).
+- App location: Choose your project’s main folder (For example, if your app is located in the root folder, enter / here).
+- Api location: Choose the API location (If your app includes an API, such as a separate API folder or functions, specify the folder name here).
+- Output location: Choose the Build output location (can be left empty).
+  
+Creating the App Service:
+- Click Review + Create, review the settings, and then click Create.
+  
+## 2. Testing the App Service
+- After clicking the Create button, navigate to the "Microsoft Azure" link in the upper left corner of the Azure portal and click on it.
+- In the middle of the screen, you should see the created resources (Resources), and the Static Web App name you provided (from the Static Web App details step) should appear. <img src="/assets/Opera Pillanatfelvétel_2025-01-13_161646_portal.azure.com.png" alt="Image description" width="1500" />
+- Click on the name, and in the "Essentials" section in the middle of the screen, you’ll find the URL for the static website you’ve hosted. Clicking on the URL will open your site in a new page. <img src="/assets/Opera Pillanatfelvétel_2025-01-13_161253_portal.azure.com.png" alt="Image description" width="1500" />
+:red_circle: It may take some time for the Azure service to locate the GitHub repository and display the website.
+Since Azure App Services includes built-in CI/CD integration, every new commit in the GitHub repository will automatically be deployed to Azure. The App Service monitors the repository, and any new changes are automatically applied.
