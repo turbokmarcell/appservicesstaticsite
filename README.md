@@ -18,7 +18,7 @@ Nyisd meg az Azure Portal-t, és jelentkezz be a fiókoddal.
 
 **App Service létrehozása:**
 
-- Az Azure portál keresőjébe írd be az App Services kifejezést, a szolgáltatás megkereséséhez. <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnLhoOuv9e7NLuruhd4L9hiGRkVF0KGxlIJA&s" alt="Kép leírása" width="25" />
+- Az Azure portál keresőjébe írd be az App Services kifejezést, a szolgáltatás megkereséséhez. <img src="/assets/images.jpg" alt="Kép leírása" width="25" />
 
 - Kattints az + Create gombra az új alkalmazás létrehozásához, majd válaszd a + Static Web App a statikus weboldal hostolásához használandó funkciót.
   
@@ -36,7 +36,7 @@ Hosting plan:
     
 Deployment details:
   - Source: Válaszd ki, hogy honnan integrálja be az App Services a weboldal kódjait (Érdemes a GitHubot választani)
-  - GitHub Account: Társítsd a GitHub fiókodat a szolgáltatáshoz, majd válaszd ki a megfelelő Organization, Repository és Branch-et (CI/CD)
+  - GitHub Account: Társítsd a GitHub fiókodat a szolgáltatáshoz, majd válaszd ki a megfelelő Organization, Repository és Branch-et :green_circle:(CI/CD)
 
 Build Details:
   - Build Presets: Autómatikusan felismeri a szolgáltatás (Custom (detected)
@@ -51,19 +51,10 @@ App Service létrehozása:
 
 ## 2. App Service működésének tesztelése
 - Miután rákattintottál a Creat gombra, navigálj az Azure portál bal felső sarkában található "*Microsoft Azure*" feliratra, és kattints rá
-- A képernyő közepén látnod kell a létrehozott erőforrásokat(Resources) és látnod kell az általad létrehozott Static Web App nevét (A nevet a **Static Web App details** lépésnél adtad meg.)
-- A névre kattintva a képernyő közepén található "Essentials" menüpontban  óaz URL mellett megtalálható lesz az általad hostolt statikus weboldal URL címe. Arra kattntva egy külön oldalon megnyílik az oldalad
--    **(Előfordulhat, hogy kell egy kis idő, míg az Azure szolgáltatás megtalálja a GitHub reposit, és megjeleníti a weboldalt)**
+- A képernyő közepén látnod kell a létrehozott erőforrásokat(Resources) és látnod kell az általad létrehozott Static Web App nevét (A nevet a **Static Web App details** lépésnél adtad meg.)<img src="/assets/Opera Pillanatfelvétel_2025-01-13_161646_portal.azure.com.png" alt="Kép leírása" width="1500" />
+- A névre kattintva a képernyő közepén található "Essentials" menüpontban  óaz URL mellett megtalálható lesz az általad hostolt statikus weboldal URL címe. Arra kattntva egy külön oldalon megnyílik az oldalad <img src="/assets/Opera Pillanatfelvétel_2025-01-13_161253_portal.azure.com.png" alt="Kép leírása" width="1500" />
+  :red_circle:Előfordulhat, hogy kell egy kis idő, míg az Azure szolgáltatás megtalálja a GitHub reposit, és megjeleníti a weboldalt
 
 Mivel az Azure App Services rendelkezik beépített CI/CD integrációval, minden egyes új commit a GitHub repository-ban automatikusan deployolásra kerül az Azure-ra.
 Az App Service monitorozza a repository-t, és bármely új változtatás automatikusan alkalmazásra kerül.
-### 3. Weboldal elérhetősége
-Miután a telepítés sikeres, az alkalmazás elérhető lesz az Azure által biztosított URL-en:
 
-arduino
-Copy code
-https://<app-name>.azurewebsites.net
-Itt fog megjelenni a statikus weboldalad.
-
-![Kép leírása](https://media.istockphoto.com/id/1176972501/hu/fot%C3%B3/boldogtalan-k%C3%B3bor-kutya-szomor%C3%BA-szemmel-a-v%C3%A1ros-utc%C3%A1j%C3%A1n.jpg?s=2048x2048&w=is&k=20&c=sYXvfqJ7kfCiZBSenIrHqRXw5vZ3bUcBr77fBnWEy64=)
-<img src="https://media.istockphoto.com/id/1176972501/hu/fot%C3%B3/boldogtalan-k%C3%B3bor-kutya-szomor%C3%BA-szemmel-a-v%C3%A1ros-utc%C3%A1j%C3%A1n.jpg?s=2048x2048&w=is&k=20&c=sYXvfqJ7kfCiZBSenIrHqRXw5vZ3bUcBr77fBnWEy64=" alt="Kép leírása" width="300" />
