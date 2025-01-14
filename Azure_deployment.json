@@ -1,0 +1,51 @@
+{
+    "apiVersion": "2024-04-01",
+    "id": "/subscriptions/4859d41e-e030-4342-af6b-f795b3c40b36/resourceGroups/website/providers/Microsoft.Web/staticSites/appservicesstaticsite",
+    "name": "appservicesstaticsite",
+    "type": "microsoft.web/staticsites",
+    "sku": {
+        "name": "Free",
+        "tier": "Free"
+    },
+    "location": "westeurope",
+    "properties": {
+        "defaultHostname": "thankful-river-0db8dc603.4.azurestaticapps.net",
+        "repositoryUrl": "https://github.com/turbokmarcell/appservicesstaticsite",
+        "branch": "main",
+        "customDomains": [],
+        "stableInboundIP": "51.105.228.104",
+        "privateEndpointConnections": [],
+        "stagingEnvironmentPolicy": "Enabled",
+        "allowConfigFileUpdates": true,
+        "contentDistributionEndpoint": "https://content-am2.infrastructure.4.azurestaticapps.net",
+        "keyVaultReferenceIdentity": "SystemAssigned",
+        "userProvidedFunctionApps": null,
+        "linkedBackends": [],
+        "provider": "GitHub",
+        "enterpriseGradeCdnStatus": "Disabled",
+        "publicNetworkAccess": null,
+        "databaseConnections": [],
+        "trafficSplitting": {
+            "environmentDistribution": {
+                "default": 100
+            }
+        },
+        "areStaticSitesDistributedBackendsEnabled": false,
+        "targetResourceGroupResourceId": null,
+        "trialExpirationTimeUtc": null,
+        "prettyNameStatus": null,
+        "prettyName": null,
+        "prettyNameHostname": null,
+        "backendRegion": {
+            "regionName": null,
+            "status": null
+        },
+        "stagingEnvironmentRegion": null,
+        "deploymentAuthPolicy": "DeploymentToken",
+        "federatedIdentityTenantId": null,
+        "federatedIdentityClientId": null,
+        "federatedIdentitySubscriptionId": null,
+        "deploymentStorageAccountResourceId": null,
+        "deploymentStorageAccountReferenceIdentity": null
+    }
+}
