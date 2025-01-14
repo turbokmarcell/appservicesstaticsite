@@ -58,6 +58,9 @@ App Service létrehozása:
 Mivel az Azure App Services rendelkezik beépített CI/CD integrációval, minden egyes új commit a GitHub repository-ban automatikusan deployolásra kerül az Azure-ra.
 Az App Service monitorozza a repository-t, és bármely új változtatás automatikusan alkalmazásra kerül.
 
+## Azure Telepítési Konfiguráció
+Az `azure_deployment.json` fájl tartalmazza a projekthez tartozó JSON fájlt. Ez magában foglalja az összes erőforrást és konfigurációt, amelyet a statikus weboldal Azure App Services-re történő telepítéséhez használtunk.
+
 
 # Hosting a Static Website on Azure App Services (eng)
 This project demonstrates how to create and host a static website using Azure App Services. The application is automatically deployed from a GitHub repository with continuous integration (CI/CD), ensuring that updates and changes to the website are quickly applied.
@@ -111,3 +114,6 @@ Creating the App Service:
 - Click on the name, and in the "Essentials" section in the middle of the screen, you’ll find the URL for the static website you’ve hosted. Clicking on the URL will open your site in a new page. <img src="/assets/Opera Pillanatfelvétel_2025-01-13_161253_portal.azure.com.png" alt="Image description" width="1500" />
 :red_circle: It may take some time for the Azure service to locate the GitHub repository and display the website.
 Since Azure App Services includes built-in CI/CD integration, every new commit in the GitHub repository will automatically be deployed to Azure. The App Service monitors the repository, and any new changes are automatically applied.
+
+## Azure Deployment Configuration
+The file `azure_deployment.json` contains the JSON file for this project. It includes all the resources and configurations used to deploy the static website on Azure App Services
